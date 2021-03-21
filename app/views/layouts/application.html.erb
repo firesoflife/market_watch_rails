@@ -7,10 +7,22 @@
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    
+    <%= stylesheet_pack_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
 
   <body>
-    <%= yield %>
+    <%= render 'home/navbar' %>
+    <div class="container">
+      <br>
+      <p class="notice"><%= notice %></p>
+      <p class="alert"><%= alert %></p>
+      <%= yield %>
+    </div>
+    <%= render 'home/footer' %>
+
   </body>
 </html>

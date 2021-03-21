@@ -1,2 +1,21 @@
-<h1>Home#index</h1>
-<p>Find me in app/views/home/index.html.erb</p>
+<h1>Stock Watch</h1>
+<p>There's Money Just Waitin' To Be Got</p>
+
+<%= form_tag root_path, :method => 'POST' do 
+%>
+  <%= text_field_tag 'ticker', nil, placeholder: "Enter Company Symbol", size: 50 %>
+  <%= submit_tag 'Find It' %>
+<% end %>
+
+
+<% if @stock%>
+  
+  <%= @stock.company_name%><br>
+  $<%= @stock.latest_price%> <br>
+<% elsif @nothing %>
+  <%= @nothing %>
+<% end %>
+
+<% if @error %>
+  <%= @error %>
+<% end %>
