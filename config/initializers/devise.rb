@@ -14,7 +14,7 @@ Devise.setup do |config|
   # confirmation, reset password and unlock tokens in the database.
   # Devise will use the `secret_key_base` as its `secret_key`
   # by default. You can change it below and use your own secret key.
-  # config.secret_key = '2a1fc95ca4ba451ce76744385f6a42d5d8c3a8e1b10fa9521f640356df5fd556e47b9277e6d11f08e9014b74e7d95bff1bcd52815917f6ca64a011f6f4c7ce9d'
+  # config.secret_key = '2a1f6a938cdf89be8a4ec655abd9cb0a962df5059db4ca5b58e977d63de49b0789b64fbcc4966f0ca503882614c67419a3ef3e5288b06e24d8540c5bdfa5eef7'
 
   # ==> Controller configuration
   # Configure the parent class to the devise controllers.
@@ -24,8 +24,7 @@ Devise.setup do |config|
   # Configure the e-mail address which will be shown in Devise::Mailer,
   # note that it will be overwritten if you use your own mailer class
   # with default "from" parameter.
-  config.mailer_sender =
-    'please-change-me-at-config-initializers-devise@example.com'
+  config.mailer_sender = 'please-change-me-at-config-initializers-devise@example.com'
 
   # Configure the class responsible to send e-mails.
   # config.mailer = 'Devise::Mailer'
@@ -127,7 +126,7 @@ Devise.setup do |config|
   config.stretches = Rails.env.test? ? 1 : 12
 
   # Set up a pepper to generate the hashed password.
-  # config.pepper = 'bee054126636d225e7f3457ddc06b0581c9de717ca9c15fc212e4ff34362f1f496a776109042d8eac520d54776fd27ba6528694ea6d6c15b568bb046f141d58a'
+  # config.pepper = '56df8d4e5e3a311e31afe2b555426b9030191b603d8404502192c9315dc6ab56224a3a60ba80190378b517a1c24199f714c4d2efd961a064e43338f9ecead853'
 
   # Send a notification to the original email when the user's email is changed.
   # config.send_email_changed_notification = false
@@ -267,7 +266,7 @@ Devise.setup do |config|
   # config.navigational_formats = ['*/*', :html]
 
   # The default HTTP method used to sign out a resource. Default is :delete.
-  config.sign_out_via = :delete
+  config.sign_out_via = :get
 
   # ==> OmniAuth
   # Add a new OmniAuth provider. Check the wiki for more information on setting

@@ -2,9 +2,9 @@ Rails
   .application
   .routes
   .draw do
-    devise_for :users 
+    devise_for :users
     resources :stocks
-    #get 'home/index'
+    # get 'home/index'
     
     get 'home/about'
     
