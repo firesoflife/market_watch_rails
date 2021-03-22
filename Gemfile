@@ -13,15 +13,15 @@ gem 'jbuilder', '~> 2.7'
 gem 'bootstrap', '~> 5.0.0.beta2'
 gem 'stock_quote', '~> 3.0'
 gem 'devise', '~> 4.7', '>= 4.7.3'
-
+gem 'prettier'
 gem 'bootsnap', '>= 1.4.4', require: false
+gem 'rubocop', '~> 1.11', require: false
 
 group :development, :test do
-  gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  gem 'byebug', platforms: %i[mri mingw x64_mingw]
 end
 
 group :development do
-  
   gem 'web-console', '>= 4.1.0'
   gem 'rack-mini-profiler', '~> 2.0'
   gem 'listen', '~> 3.3'
@@ -34,4 +34,4 @@ group :test do
   gem 'webdrivers'
 end
 
-gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html class="h-100">
   <head>
     <title>MarketWatch</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -9,20 +9,21 @@
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     
     <%= stylesheet_pack_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
-  <body>
+  <body class='h-100'>
     <%= render 'home/navbar' %>
-    <div class="container">
+    <div class="container h-100">
       <br>
-      <p class="notice"><%= notice %></p>
-      <p class="alert"><%= alert %></p>
+      <%= render 'home/flash'%>
+    
       <%= yield %>
     </div>
-    <%= render 'home/footer' %>
+      <%= render 'home/footer' %>
 
   </body>
 </html>
