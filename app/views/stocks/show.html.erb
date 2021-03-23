@@ -6,8 +6,11 @@
           The company, <%= @stock.ticker %>, does not exist in our database
 
       <% else %>
-        <strong> <%=  @ticker.company_name%></strong> <br>
-          <img src="<% StockQuote::Stock.logo(@stock.ticker) %>" alt="">
+        <% @logo = StockQuote::Stock.logo(@stock.ticker)%>
+        <img src="<%= @logo.url %>">
+
+        <h2> <%=  @ticker.company_name%></h2> <br>
+          
           Symbol: <%= @ticker.symbol %> <br>
           Current Value: <%= number_with_precision(@ticker.latest_price, :precision => 2, :delimiter => ',') %> <br>
           Market Cap:$<%= number_with_precision(@ticker.market_cap, :precision => 2, :delimiter => ',') %>
