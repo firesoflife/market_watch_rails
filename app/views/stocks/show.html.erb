@@ -1,10 +1,21 @@
+  
+    <% @ticker = StockQuote::Stock.quote(@stock.ticker) %>
+    
 
-<p>
-  <strong>Ticker:</strong>
-  <%= @stock.ticker %>
-</p>
+      <% if !@ticker %>
+          The company, <%= @stock.ticker %>, does not exist in our database
 
+      <% else %>
+        <strong> <%=  @ticker.company_name%></strong> <br>
+          <img src="<% StockQuote::Stock.logo(@stock.ticker) %>" alt="">
+          Symbol: <%= @ticker.symbol %> <br>
+          Current Value: <%= number_with_precision(@ticker.latest_price, :precision => 2, :delimiter => ',') %> <br>
+          Market Cap:$<%= number_with_precision(@ticker.market_cap, :precision => 2, :delimiter => ',') %>
+        <% end %> <br>
 
+        Primary Exchange: <%= @ticker.primary_exchange %> <br>
+        Previous Close: <%= @ticker.previous_close %> <br>
+        YTD Change: <%= number_with_precision(@ticker.ytd_change, :precision => 3, :delimeter => ',')%> <br>
 
 <%= link_to 'Edit', edit_stock_path(@stock) %> |
 <%= link_to 'Back', stocks_path %>

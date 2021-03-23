@@ -11,11 +11,11 @@ import 'channels';
 Rails.start();
 Turbolinks.start();
 ActiveStorage.start();
-import * as bs5 from 'bs5';
+// import * as bs5 from 'bs5';
 
-document.addEventListener('turbolinks:load', function () {
-  bs5.start();
-});
+// document.addEventListener('turbolinks:load', function () {
+//   bs5.start();
+// });
 
 import 'bootstrap/dist/js/bootstrap';
 import 'bootstrap/dist/css/bootstrap';

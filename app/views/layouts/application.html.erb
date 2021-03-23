@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="h-100">
+<html style="height: 85%">
   <head>
     <title>MarketWatch</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -12,6 +12,8 @@
 
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
 
+    
+
 <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
@@ -22,6 +24,8 @@
       <%= render 'home/flash'%>
     
       <%= yield %>
+      
+      <%# <div class="h-25"></div> %>
     </div>
       <%= render 'home/footer' %>
 
